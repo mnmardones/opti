@@ -23,6 +23,9 @@ r = modelo.addVars(dias, trabajador, cuadrilla, name="R", vtype=GRB.BINARY)
 u = modelo.addVars(dias, trabajador, trabajador, cuadrilla, name="U", vtype=GRB.BINARY)
 h = modelo.addVars(dias, trabajador, name="H")
 modelo.setObjective(T, GRB.MINIMIZE)
+modelo.update()
+for i in modelo.getVars():
+    print(i)
 
 """
 #Asignacion de trabajo y dias libres
