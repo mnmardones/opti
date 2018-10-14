@@ -1,7 +1,7 @@
-#from gurobipy import GRB, Model
+from gurobipy import GRB, Model
 import json
 
-#modelo = Model("Entrega 2 Optimizacion")
+modelo = Model("Entrega 2 Optimizacion")
 
 with open('datos.json', 'r') as f:
     datos = json.load(f)
